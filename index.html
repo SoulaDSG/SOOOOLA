@@ -63,7 +63,8 @@ h1 {
     <div class="subtitle">Scan my laptop QR to contact me</div>
 
     <a class="btn call" href="tel:0783322403">📞 Call me</a>
-    <a class="btn email" href="https://mail.google.com/mail/?view=cm&to=dznet40@gmail.com">Emile ME</a>
+    <a class="btn email" href="https://mail.google.com/mail/?view=cm&to=dznet40@gmail.com">📧 Email me</a>
+    <!-- <a class="btn email" href="mailto:dznet40@gmail.com">📧 Email me</a> -->
     <a class="btn ig" href="https://www.instagram.com/the_soul_3.6">📸 Instagram</a>
     <a class="btn fb" href="https://www.facebook.com/share/1Ap16qbFHp/">📘 Facebook</a>
     <a class="btn snap" href="https://www.snapchat.com/add/soula.666">👻 Snapchat</a>
@@ -71,5 +72,14 @@ h1 {
     <div class="footer">© Slimane</div>
   </div>
 </div>
+<script>
+  const emailBtn = document.querySelector('.btn.email');
+  emailBtn.addEventListener('click', function(e) {
+    if (/Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+      e.preventDefault();
+      window.location.href = 'mailto:dznet40@gmail.com';
+    }
+  });
+</script>
 </body>
 </html>
